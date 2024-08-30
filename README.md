@@ -1,12 +1,5 @@
 # Projeto de automação de testes da API fakestoreapi
 
-* [Descrição](#Descrição)
-* [Pré-requisitos](#Pré-requisitos)
-* [Configuração do Ambiente](#Configuração do Ambiente)
-* [Estrutura do Projeto](#Estrutura do Projeto)
-* [Como executar os testes](#Como executar os testes)
-* [Relatório de Testes](#Relatório de Testes)
-
 ## Descrição
 
 Este é um projeto de estudo sobre automação de testes de APIs Rest usando as ferramentas Rest Assured e JUnit5 com Java
@@ -25,7 +18,7 @@ Este é um projeto de estudo sobre automação de testes de APIs Rest usando as 
 
 1 Clone o repositório:
 ```
-git clone https://github.com/leonardomelgarejo/*.git
+git clone https://github.com/leonardomelgarejo/fakestoreapi.git
 ```
 
 2 Instale as dependências do Maven:
@@ -54,7 +47,8 @@ mvn clean install
 │       │            │   └── Constantes.java
 │       │            ├── pojo
 │       │            ├── suite
-                     └── tests
+│       │            │   └── AllTestsSuite.java
+│       │            └── tests
 │       │                ├── contract
 │       │                │   └── ProductContractTest.java
 │       │                ├── e2e
@@ -83,5 +77,5 @@ mvn clean test
       * mvn allure:report : Irá gerar o HTML na pasta target/site/allure-maven-plugin
     * O local onde o arquivos arquivos referência para o relatório são definidos no src/test/resources/allure.properties
     * Remotamente, acessando o link abaixo:
-      * https://leonardomelgarejo.github.io/barriga-rest/
+      * https://leonardomelgarejo.github.io/fakestoreapi/
     
