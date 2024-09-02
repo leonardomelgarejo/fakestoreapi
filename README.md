@@ -26,6 +26,14 @@ git clone https://github.com/leonardomelgarejo/fakestoreapi.git
 mvn clean install
 ```
 
+## Como executar os testes
+
+Você pode executar manualmente cada teste dentro das classes em `src\test\java`, mas o indicado é executar via linha de comando, conforme exemplo abaixo:
+```
+mvn clean test
+```
+Complemento: A execução do comando acima, está configurada no POM.xml do projeto para executar a suite de testes `src/test/java/com/fakestoreapi/suite/AllTestsSuite.java`.
+
 ## Estrutura do Projeto
 
 ```plaintext
@@ -43,8 +51,8 @@ mvn clean install
 │       │   └── com
 │       │       └── fakestoreapi
 │       │            ├── config
-│       │            │   ├── BaseTest.java
-│       │            │   └── Constantes.java
+│       │            │   ├── Configuration.java
+│       │            │   └── ConfigurationManager.java
 │       │            ├── pojo
 │       │            ├── suite
 │       │            │   └── AllTestsSuite.java
@@ -55,18 +63,17 @@ mvn clean install
 │       │                │   └── EndToEndTest.java
 │       │                ├── functional
 │       │                │   └── ProductTest.java
-│       │                └── health
-│       │                    └── HealthCheckTest.java
+│       │                ├── health
+│       │                │   └── HealthCheckTest.java
+│       │                └── BaseTest.java
 │       └── resources
-│           └── allure.properties
+│           ├── schemas
+│           │   └── products.json
+│           ├── allure.properties
+│           └── api.properties
 ├── .gitignore
 ├── pom.xml
 └── README.md
-```
-
-## Como executar os testes
-```
-mvn clean test
 ```
 
 ## Relatório de Testes

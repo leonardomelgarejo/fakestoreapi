@@ -1,16 +1,17 @@
-package com.fakestoreapi.test.functional;
+package com.fakestoreapi.tests.functional;
 
-import com.fakestoreapi.config.BaseTest;
+import com.fakestoreapi.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class ProductTest extends BaseTest {
+public class ProductsTest extends BaseTest {
 
     @Test
     public void deveListarTodosProdutos(){
         given()
+            .log().all()
         .when()
             .get("/products")
         .then()

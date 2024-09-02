@@ -5,10 +5,10 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectPackages({
-        "com.fakestoreapi.test.health",
-        "com.fakestoreapi.test.contract",
-        "com.fakestoreapi.test.functional",
-        "com.fakestoreapi.test.e2e"
+        "com.fakestoreapi.tests.health",
+        "com.fakestoreapi.tests.contract",
+        "com.fakestoreapi.tests.functional",
+        "com.fakestoreapi.tests.e2e"
 })
 public class AllTestsSuite {
 }

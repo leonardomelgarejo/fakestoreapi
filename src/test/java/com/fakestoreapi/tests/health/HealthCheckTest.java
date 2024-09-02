@@ -1,6 +1,6 @@
-package com.fakestoreapi.test.health;
+package com.fakestoreapi.tests.health;
 
-import com.fakestoreapi.config.BaseTest;
+import com.fakestoreapi.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class HealthCheckTest extends BaseTest {
 
     @Test
-    public void healthCheck(){
+    public void productsHealthCheck(){
         given()
         .when()
             .get("/products")
