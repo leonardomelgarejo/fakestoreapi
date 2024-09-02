@@ -1,6 +1,7 @@
 package com.fakestoreapi.tests.health;
 
 import com.fakestoreapi.BaseTest;
+import io.qameta.allure.restassured.AllureRestAssured;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ public class HealthCheckTest extends BaseTest {
     @DisplayName("Health check do recurso /products")
     public void productsHealthCheck(){
         given()
+            .filter(new AllureRestAssured())
         .when()
             .get(configuration.basePathProducts())
         .then()

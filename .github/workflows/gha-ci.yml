@@ -24,7 +24,7 @@ jobs:
         run: mvn clean install
 
       - name: Run Maven tests
-        run: mvn clean test
+        run: mvn test
 
       - name: Generate Allure Report
         run: mvn verify

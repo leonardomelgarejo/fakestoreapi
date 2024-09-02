@@ -1,6 +1,7 @@
 package com.fakestoreapi.tests.contract;
 
 import com.fakestoreapi.BaseTest;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -14,6 +15,7 @@ public class ProductsContractTest extends BaseTest {
     @DisplayName("Deve validar schema do recurso /products")
     public void deveValidarProductsSchemaJson(){
         given()
+            .filter(new AllureRestAssured())
         .when()
             .get("/products")
         .then()

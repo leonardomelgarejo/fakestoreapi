@@ -1,6 +1,7 @@
 package com.fakestoreapi.specs;
 
 import com.fakestoreapi.config.ConfigurationManager;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 
