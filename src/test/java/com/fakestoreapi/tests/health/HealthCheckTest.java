@@ -1,19 +1,23 @@
 package com.fakestoreapi.tests.health;
 
 import com.fakestoreapi.BaseTest;
+import org.apache.http.HttpStatus;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
+@DisplayName("Classe de testes de health check dos recursos")
 public class HealthCheckTest extends BaseTest {
 
     @Test
+    @DisplayName("Health check do recurso /products")
     public void productsHealthCheck(){
         given()
         .when()
-            .get("/products")
+            .get(configuration.basePathProducts())
         .then()
-            .statusCode(200)
+            .statusCode(HttpStatus.SC_OK)
         ;
     }
 }

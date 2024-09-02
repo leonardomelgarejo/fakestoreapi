@@ -18,4 +18,7 @@ public interface Configuration extends Config{
     @Key("content.type")
     ContentType contentType();
 
+    @Key("base.path.products")
+    String basePathProducts();
+
 }
