@@ -1,5 +1,7 @@
 # Projeto de automação de testes da API fakestoreapi
 
+[![GHA-CI](https://github.com/leonardomelgarejo/fakestoreapi/actions/workflows/gha-ci.yml/badge.svg)](https://github.com/leonardomelgarejo/fakestoreapi/actions/workflows/gha-ci.yml)
+
 ## Descrição
 
 Este é um projeto de estudo sobre automação de testes de APIs Rest usando as ferramentas Rest Assured e JUnit5 com Java
